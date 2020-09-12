@@ -1,3 +1,51 @@
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px; }
+
+.header {
+  background-image: url(/assets/images/pattern-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 15.625rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center; }
+
+.header__title {
+  color: #ebe7db;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1.5rem auto; }
+
+.form {
+  margin: 0 auto;
+  position: relative; }
+
+.form__input {
+  width: 35rem;
+  height: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 0px transparent; }
+
+.form__input::placeholder {
+  color: #969696; }
+
+.form__button {
+  position: absolute;
+  height: 100%;
+  width: 2rem;
+  background-color: #2b2b2b;
+  background-image: url(/assets/images/icon-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0.5rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  border: 0px transparent;
+  cursor: pointer;
+  right: 0rem; }
+
 .attribution {
   font-size: 11px;
   text-align: center; }
