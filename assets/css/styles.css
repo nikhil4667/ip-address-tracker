@@ -53,4 +53,41 @@ body {
 .attribution a {
   color: #3e52a3; }
 
+.main__informations {
+  position: absolute;
+  width: 75%;
+  height: 4rem;
+  display: flex;
+  background-color: white;
+  z-index: 2;
+  padding: 1rem 0.5rem;
+  top: -3rem;
+  /*2rem from height/2 + 1 rem from padding*/
+  border-radius: 0.5rem;
+  box-shadow: 10px 5px 50px #2b2b2b; }
+
+.information__block-content {
+  width: 25%;
+  border-right: 1px solid #969696;
+  margin: 0 0.4rem; }
+
+.information__block-content:nth-child(4n) {
+  border: 0; }
+
+.block-content__title {
+  color: #969696;
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem; }
+
+.block-content__content {
+  font-weight: 500;
+  color: #2b2b2b;
+  font-size: 1.2rem; }
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  position: relative; }
+
 /*# sourceMappingURL=styles.css.map */
