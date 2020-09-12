@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,YAAa;EAAE,SAAS,EAAE,IAAI;EAAE,UAAU,EAAE,MAAM;;AAClD,cAAe;EAAE,KAAK,EAAE,OAAkB",
+"sources": ["../sass/attribution/attribution.scss"],
+"names": [],
+"file": "styles.css"
+}
