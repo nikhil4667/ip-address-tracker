@@ -2,6 +2,11 @@ body {
   font-family: 'Rubik', sans-serif;
   font-size: 18px; }
 
+#mapid {
+  width: 100%;
+  height: calc(100vh - 15.625rem);
+  z-index: 1; }
+
 .header {
   background-image: url(/assets/images/pattern-bg.png);
   background-repeat: no-repeat;
