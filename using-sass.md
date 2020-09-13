@@ -1,5 +1,7 @@
 # Using sass
 
+First of all have sass installed
+
 Without `cd` nothing just copypaste
 
 ```cmd

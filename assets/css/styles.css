@@ -29,6 +29,10 @@ body {
   border-radius: 0.5rem;
   border: 0px transparent; }
 
+.form__error {
+  margin: 0.5rem auto;
+  color: white; }
+
 .form__input::placeholder {
   color: #969696; }
 
@@ -44,7 +48,7 @@ body {
   border-radius: 0 0.5rem 0.5rem 0;
   border: 0px transparent;
   cursor: pointer;
-  right: 0rem; }
+  right: 0; }
 
 .attribution {
   font-size: 11px;
