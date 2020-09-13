@@ -1,11 +1,10 @@
-import {fetchIP, fetchDomain,fetchMap} from '../api/api.js';
+import {fetchIP, fetchDomain} from '../api/api.js';
 import {header} from '../app.js';
+import {initMap,customMarker} from './initMap.js'
 
 const mainCards = document.querySelectorAll('.block-content__content');
-
-let mymap = L.map('mapid').setView([51.505, -0.09], 13);
-let marker = L.marker([51.5, -0.09]).addTo(mymap);
-fetchMap(mymap);
+let mymap = L.map('mapid').setView([37.4223, -122.085], 13);
+initMap(mymap)();
 
 export const sendFetch = (inputValue) => {
     if(header.lastChild == document.querySelector('.form__error')) document.querySelector('.form__error').remove();
@@ -43,5 +42,5 @@ export const sendFetch = (inputValue) => {
 
  const _moveMap = (res) => {
     mymap.flyTo([res.location.lat, res.location.lng], 13);
-    L.marker([res.location.lat, res.location.lng]).addTo(mymap);
+    L.marker([res.location.lat, res.location.lng],{icon: customMarker}).addTo(mymap);
  }

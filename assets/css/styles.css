@@ -4,7 +4,7 @@ body {
 
 #mapid {
   width: 100%;
-  height: calc(100vh - 15.625rem);
+  height: calc(100vh - 15.625rem - 12px);
   z-index: 1; }
 
 .header {
@@ -27,19 +27,27 @@ body {
   margin: 0 auto;
   position: relative; }
 
+.form__label {
+  text-indent: -9999px;
+  font-size: 0; }
+
 .form__input {
-  width: 35rem;
-  height: 1rem;
+  width: 15rem;
+  height: 1.1rem;
   padding: 0.75rem;
   border-radius: 0.5rem;
-  border: 0px transparent; }
+  border: 0px transparent;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer; }
 
 .form__error {
   margin: 0.5rem auto;
   color: white; }
 
 .form__input::placeholder {
-  color: #969696; }
+  color: #969696;
+  font-size: 0.8rem; }
 
 .form__button {
   position: absolute;
@@ -55,6 +63,19 @@ body {
   cursor: pointer;
   right: 0; }
 
+@media (min-width: 634px) {
+  .form__input {
+    width: 35rem;
+    height: 1.4rem; }
+
+  .form__input::placeholder {
+    font-size: 1rem; } }
+@media (min-width: 438px) and (max-width: 634px) {
+  .form__input {
+    width: 23rem; }
+
+  .form__input::placeholder {
+    font-size: 0.8rem; } }
 .attribution {
   font-size: 11px;
   text-align: center; }
@@ -65,20 +86,22 @@ body {
 .main__informations {
   position: absolute;
   width: 75%;
-  height: 4rem;
   display: flex;
+  height: 10rem;
+  top: -6rem;
+  /*5rem from height/2 + 1 rem from padding*/
+  flex-direction: column;
   background-color: white;
   z-index: 2;
   padding: 1rem 0.5rem;
-  top: -3rem;
-  /*2rem from height/2 + 1 rem from padding*/
   border-radius: 0.5rem;
   box-shadow: 10px 5px 50px #2b2b2b; }
 
 .information__block-content {
-  width: 25%;
-  border-right: 1px solid #969696;
-  margin: 0 0.4rem; }
+  width: 100%;
+  margin: 0.4rem auto;
+  text-align: center;
+  font-size: 0.5rem; }
 
 .information__block-content:nth-child(4n) {
   border: 0; }
@@ -86,14 +109,28 @@ body {
 .block-content__title {
   color: #969696;
   font-weight: 700;
-  font-size: 0.8rem;
-  margin-bottom: 0.5rem; }
+  font-size: 0.8rem; }
 
 .block-content__content {
   font-weight: 500;
   color: #2b2b2b;
-  font-size: 1.2rem; }
+  font-size: 1rem; }
 
+@media (min-width: 500px) {
+  .main__informations {
+    flex-direction: row;
+    height: 5rem;
+    top: -3.5rem;
+    /*2.5rem from height/2 + 1 rem from padding*/ }
+
+  .information__block-content {
+    width: 25%;
+    border-right: 1px solid rgba(150, 150, 150, 0.5);
+    margin: 0 0.4rem;
+    text-align: left; }
+
+  .block-content__content {
+    font-size: 1.2rem; } }
 .main {
   display: flex;
   justify-content: space-around;
